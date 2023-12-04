@@ -33,7 +33,6 @@ def part_one():
     print(sum(result_id))
 
 
-
 if __name__ == '__main__':
     requests = []
     bag_content = {"red": 12, "green": 13, "blue":14}
@@ -49,15 +48,9 @@ if __name__ == '__main__':
                     if int(tmp[0]) > ball_map[tmp[1]]:
                         ball_map[tmp[1]] = int(tmp[0])
             requests[-1] = ball_map
-
     result = list()
-    #for i in requests:
-    #    print(i)
     for i in range(len(requests)):
         result.append(1)
         for amount in requests[i].values():
             result[-1] *= amount
-
     print(sum(result))
-
-
